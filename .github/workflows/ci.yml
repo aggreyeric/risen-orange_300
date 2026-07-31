@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-contracts:
+    name: Build & Test Soroban Contracts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+
+      - name: Install cargo-soroban
+        run: |
+          cargo install --locked soroban-cli || true
+
+      - name: Build shared
+        working-directory: contracts/shared
+        run: cargo build --target wasm32-unknown-unknown
+
+      - name: Build registry
+        working-directory: contracts/registry
+        run: cargo build --target wasm32-unknown-unknown
+
+      - name: Build auction
+        working-directory: contracts/auction
+        run: cargo build --target wasm32-unknown-unknown
+
+      - name: Run tests
+        working-directory: contracts/auction
+        run: cargo test
+
+  build-frontend:
+    name: Build Frontend
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install & build frontend
+        working-directory: frontend
+        run: |
+          npm ci
+          npm run build

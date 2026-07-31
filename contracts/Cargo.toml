@@ -1,0 +1,25 @@
+[workspace]
+resolver = "2"
+members = [
+    "shared",
+    "registry",
+    "auction",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/sabiedu/risen-orange-300"
+
+[workspace.dependencies]
+soroban-sdk = "22"
+
+[profile.release]
+codegen-units = 1
+opt-level = "z"
+lto = true
+debug = false
+strip = "symbols"
+panic = "abort"
+overflow-checks = true

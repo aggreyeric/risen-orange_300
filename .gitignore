@@ -1,0 +1,28 @@
+# Rust / Soroban
+target/
+**/*.rs.bk
+*.wasm
+Cargo.lock
+
+# Node / Frontend
+node_modules/
+dist/
+.vite/
+*.local
+.env
+.env.local
+.env.*.local
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Playwright
+test-results/
+playwright-report/
+
+# Agent workspace
+memory/
+dev.log
