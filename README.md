@@ -17,6 +17,8 @@ Built for the **Stellar Frontend Challenge — Level 3 (Orange Belt)**. This pro
 
 ## 🔗 Live Deployment (Stellar Testnet)
 
+> 🌐 **Web App: [risen-auction.sabiedu.online](https://risen-auction.sabiedu.online)**
+
 | Contract | Address | Explorer |
 | --- | --- | --- |
 | **Registry** | `CAHHJV2EHV4FRDNWSE5QIFXAISCDTRR2TJKP5NRPDBBGJYDVRA5UPDAB` | [View](https://stellar.expert/explorer/testnet/contract/CAHHJV2EHV4FRDNWSE5QIFXAISCDTRR2TJKP5NRPDBBGJYDVRA5UPDAB) |
