@@ -15,6 +15,17 @@
 
 Built for the **Stellar Frontend Challenge — Level 3 (Orange Belt)**. This project implements a complete onchain auction house with **two inter-communicating Soroban contracts**, real-time event streaming, and a production-ready React frontend.
 
+## 🔗 Live Deployment (Stellar Testnet)
+
+| Contract | Address | Explorer |
+| --- | --- | --- |
+| **Registry** | `CAHHJV2EHV4FRDNWSE5QIFXAISCDTRR2TJKP5NRPDBBGJYDVRA5UPDAB` | [View](https://stellar.expert/explorer/testnet/contract/CAHHJV2EHV4FRDNWSE5QIFXAISCDTRR2TJKP5NRPDBBGJYDVRA5UPDAB) |
+| **Auction #1** | `CCFMC5SPXMHGVSBHV4CJCRSMQK63BIPQBWTYDVMLWJR325FZDCCVJY3D` | [View](https://stellar.expert/explorer/testnet/contract/CCFMC5SPXMHGVSBHV4CJCRSMQK63BIPQBWTYDVMLWJR325FZDCCVJY3D) |
+| **Auction #2** | `CAUJTTGUSWYGASMFENBULWD43VMCBPWSHF7TUMC52HSESMSEYNBOQQNG` | [View](https://stellar.expert/explorer/testnet/contract/CAUJTTGUSWYGASMFENBULWD43VMCBPWSHF7TUMC52HSESMSEYNBOQQNG) |
+| **Auction #3** | `CCBPGRJNIQYJBBBEAFBZOZQHWE5L4YCTXJHHJOXX66KJHZCAZDAKF6E3` | [View](https://stellar.expert/explorer/testnet/contract/CCBPGRJNIQYJBBBEAFBZOZQHWE5L4YCTXJHHJOXX66KJHZCAZDAKF6E3) |
+
+The frontend reads live data from these contracts via Soroban RPC. Connect your Freighter wallet (testnet) to place real bids.
+
 ## 🏗️ Architecture
 
 ### Two Inter-Communicating Contracts
@@ -134,10 +145,10 @@ Set `VITE_DEMO_MODE=true` in `frontend/.env.local` to run without a wallet or de
 
 | # | State | Screenshot |
 | --- | --- | --- |
-| 1 | Auction house — active auctions grid | ![Auctions](screenshots/01-auction-overview.png) |
-| 2 | Bidding — placing a bid on an auction | ![Bidding](screenshots/02-place-bid.png) |
-| 3 | Bid confirmed — transaction status + hash | ![Confirmed](screenshots/03-bid-confirmed.png) |
-| 4 | Live event feed — real-time events | ![Events](screenshots/04-event-feed.png) |
+| 1 | Live auction house — real on-chain data from Soroban | ![Overview](screenshots/01-live-auction-overview.png) |
+| 2 | Auction detail — live bids + bidder addresses | ![Detail](screenshots/02-live-auction-detail.png) |
+| 3 | Full grid — 3 live auctions on testnet | ![Grid](screenshots/03-live-auction-grid.png) |
+| 4 | Registry contract deployed on Stellar Expert | ![Explorer](screenshots/04-explorer-contract-deployed.png) |
 
 ## 🧪 Tests
 

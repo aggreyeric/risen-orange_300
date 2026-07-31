@@ -20,10 +20,15 @@ export function Header({ onCreateClick }: { onCreateClick: () => void }) {
         </div>
 
         <div className="flex items-center gap-2 sm:gap-3">
-          {DEMO_MODE && (
+          {DEMO_MODE ? (
             <span className="hidden sm:inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full bg-accent-500/10 text-accent-400 border border-accent-500/20">
               <span className="w-1.5 h-1.5 rounded-full bg-accent-400 animate-pulse" />
               Demo Mode
+            </span>
+          ) : (
+            <span className="hidden sm:inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full bg-green-500/10 text-green-400 border border-green-500/20">
+              <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+              Soroban Testnet
             </span>
           )}
           <button

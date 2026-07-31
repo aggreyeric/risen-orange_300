@@ -72,7 +72,7 @@ function AppContent() {
           </h2>
           <p className="text-sm text-white/40">
             Two inter-communicating Soroban contracts — Registry ↔ Auction — powering real-time onchain bidding.
-            {DEMO_MODE && " Running in simulated demo mode."}
+            {DEMO_MODE ? " Running in simulated demo mode." : " Live on Stellar Testnet — connect Freighter to bid."}
           </p>
         </div>
 
